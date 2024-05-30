@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personalized Jewellery Customization Process</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="home-background">
+      <div class="formCard">
+        <div class="container">
+          <h1>Personalized Jewellery Customization Process</h1>
+          <form id="jewelleryForm">
+            <div class="step">
+              <div class="form-group">
+                <label for="occasion">Occasion</label>
+                <select id="occasion" name="occasion" required>
+                  <option value="">Select an occasion</option>
+                  <option value="engagement">Engagement</option>
+                  <option value="anniversary">Anniversary</option>
+                  <option value="birthday">Birthday</option>
+                  <option value="daily-wear">Daily-wear</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Gift or Personal Purchase</label>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    id="gift"
+                    name="purchaseType"
+                    value="gift"
+                    required
+                  />
+                  <label for="gift">Gift</label>
+                  <input
+                    type="radio"
+                    id="personal"
+                    name="purchaseType"
+                    value="personal"
+                    required
+                  />
+                  <label for="personal">Personal Purchase</label>
+                </div>
+              </div>
+              <button type="button" class="nextBtn">Next</button>
+            </div>
+
+            <div class="step">
+              <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-options">
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required
+                  />
+                  <label for="male" class="gender-icon male-icon"></label>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                    required
+                  />
+                  <label for="female" class="gender-icon female-icon"></label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Age Group</label>
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    id="age-18-25"
+                    name="ageGroup"
+                    value="18-25"
+                    required
+                  />
+                  <label for="age-18-25">18-25</label>
+                  <input
+                    type="radio"
+                    id="age-26-35"
+                    name="ageGroup"
+                    value="26-35"
+                    required
+                  />
+                  <label for="age-26-35">26-35</label>
+                  <input
+                    type="radio"
+                    id="age-36-45"
+                    name="ageGroup"
+                    value="36-45"
+                    required
+                  />
+                  <label for="age-36-45">36-45</label>
+                  <input
+                    type="radio"
+                    id="age-46+"
+                    name="ageGroup"
+                    value="46+"
+                    required
+                  />
+                  <label for="age-46+">46+</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="religion">Religion</label>
+                <input type="text" id="religion" name="religion" />
+              </div>
+              <button type="button" class="prevBtn">Previous</button>
+              <button type="button" class="nextBtn">Next</button>
+            </div>
+
+            <div class="step">
+              <div class="form-group">
+                <label>Type of Jewellery</label>
+                <div class="jewellery-options">
+                  <input
+                    type="checkbox"
+                    id="rings"
+                    name="jewelleryType"
+                    value="rings"
+                  />
+                  <label for="rings" class="jewellery-icon ring-icon"></label>
+                  <input
+                    type="checkbox"
+                    id="necklaces"
+                    name="jewelleryType"
+                    value="necklaces"
+                  />
+                  <label
+                    for="necklaces"
+                    class="jewellery-icon necklace-icon"
+                  ></label>
+                  <input
+                    type="checkbox"
+                    id="pendants"
+                    name="jewelleryType"
+                    value="pendants"
+                  />
+                  <label
+                    for="pendants"
+                    class="jewellery-icon pendant-icon"
+                  ></label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="budget"
+                  >Budget: <span id="budgetValue">Rs.50000</span></label
+                >
+                <input
+                  type="range"
+                  id="budget"
+                  name="budget"
+                  min="50000"
+                  max="1000000"
+                  value="5000"
+                  step="1000"
+                  required
+                />
+              </div>
+
+              <button type="button" class="prevBtn">Previous</button>
+              <button type="button" class="nextBtn">Next</button>
+            </div>
+
+            <div class="step">
+              <div class="form-group">
+                <label for="outfit"
+                  >Would you like to match your jewellery with an outfit?
+                </label>
+                <input type="file" id="outfit" name="outfit" accept="image/*" />
+                <div id="outfitPreview" class="image-preview"></div>
+              </div>
+              <button type="button" class="prevBtn">Previous</button>
+              <button type="submit" class="submitBtn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
